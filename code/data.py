@@ -18,7 +18,7 @@ y_train = np.hstack((y_train, 1 - y_train))
 x_train = trainDataFrame.drop(features_to_drop, axis=1)
 
 # Load Test Data
-testDataFrame = pd.read_csv('processed_data/datatest2.csv')
+testDataFrame = pd.read_csv('processed_data/datatest.csv')
 y_test = testDataFrame['Occupancy'].values.tolist()
 y_test = LabelBinarizer().fit_transform(y_test)
 y_test = np.hstack((y_test, 1 - y_test))
