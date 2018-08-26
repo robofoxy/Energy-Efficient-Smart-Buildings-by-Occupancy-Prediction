@@ -5,8 +5,8 @@ CLOSED:
 accuracy:  0.8923076923076924
 fscore: 0.8781643646516648
 OPEN:
-accuracy: 0.8512100082034455
-fscore: 0.748702385012409
+accuracy: 0.851312551271534
+fscore: 0.7586552341412298
 
 
 criterion='entropy', splitter='best', max_depth=6, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features='log2', random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, min_impurity_split=None, class_weight=None, presort=False
@@ -57,11 +57,132 @@ criterion='gini', splitter='best', max_depth=1, min_samples_split=2, min_samples
 ################################################################################################################################
 
 CLOSED:
-accuracy: 0.7949138638228056
-fscore: 0.6551763155065994
-OPEN:
 accuracy: 0.8090056285178236
 fscore: 0.7630158829157982
+OPEN:
+accuracy: 0.7949138638228056
+fscore: 0.6551763155065994
+
+
+criterion='gini', splitter='best', max_depth=None, min_samples_split=0.3, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features='log2', random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, min_impurity_split=None, class_weight=None, presort=False
+################################################################################################################################
+
+CLOSED:
+accuracy: 0.9362101313320825
+fscore: 0.9310526100549466
+OPEN:
+accuracy: 0.7866078753076292
+fscore: 0.6423870302267445
+
+
+criterion='gini', splitter='best', max_depth=None, min_samples_split=0.5, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features='log2', random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, min_impurity_split=None, class_weight=None, presort=False
+################################################################################################################################
+
+CLOSED:
+accuracy: 0.9358348968105066
+fscore: 0.9305368515252352
+OPEN:
+accuracy: 0.7858900738310091
+fscore: 0.6341153424843271
+
+
+criterion='gini', splitter='best', max_depth=None, min_samples_split=0.8, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features='log2', random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, min_impurity_split=None, class_weight=None, presort=False
+################################################################################################################################
+
+CLOSED:
+accuracy: 0.9061913696060038
+fscore: 0.8961415959883923
+OPEN:
+accuracy: 0.793273174733388
+fscore: 0.7054024899712638
+
+
+criterion='gini', splitter='best', max_depth=None, min_samples_split=0.25, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features='log2', random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, min_impurity_split=None, class_weight=None, presort=False
+################################################################################################################################
+
+CLOSED:
+accuracy: 0.9358348968105066
+fscore: 0.9305056239488312
+OPEN:
+accuracy: 0.7854799015586547
+fscore: 0.6029581791317589
+
+
+criterion='gini', splitter='best', max_depth=None, min_samples_split=0.35, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features='log2', random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, min_impurity_split=None, class_weight=None, presort=False
+################################################################################################################################
+
+CLOSED:
+accuracy: 0.9365853658536586
+fscore: 0.9313800369895858
+OPEN:
+accuracy: 0.7877358490566038
+fscore: 0.6171073137581844
+
+
+criterion='gini', splitter='best', max_depth=10, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features='auto', random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, min_impurity_split=None, class_weight=None, presort=False
+################################################################################################################################
+
+CLOSED:
+accuracy: 0.8870544090056285
+fscore: 0.8713694816449853
+OPEN:
+accuracy: 0.8399302707136997
+fscore: 0.7425398421176345
+
+criterion='gini', splitter='best', max_depth=8, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features='auto', random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, min_impurity_split=None, class_weight=None, presort=False
+################################################################################################################################
+
+CLOSED:
+accuracy: 0.8893058161350844
+fscore: 0.8739106812821358
+OPEN:
+accuracy: 0.84649302707137
+fscore: 0.7548501228465
+
+
+criterion='gini', splitter='best', max_depth=5, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features='auto', random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, min_impurity_split=None, class_weight=None, presort=False
+################################################################################################################################
+
+CLOSED:
+accuracy: 0.8851782363977486
+fscore: 0.8697268439669854
+OPEN:
+accuracy: 0.8477235438884332
+fscore: 0.736813920749948
+
+
+criterion='entropy', splitter='best', max_depth=None, min_samples_split=0.35, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features='auto', random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, min_impurity_split=None, class_weight=None, presort=False
+################################################################################################################################
+
+CLOSED:
+accuracy: 0.9354596622889306
+fscore: 0.9301462968607133
+OPEN:
+accuracy: 0.787428219852338
+fscore: 0.6172137673101791
+
+
+
+criterion='entropy', splitter='best', max_depth=None, min_samples_split=0.35, min_samples_leaf=0.01, min_weight_fraction_leaf=0.0, max_features='auto', random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, min_impurity_split=None, class_weight=None, presort=False
+################################################################################################################################
+
+CLOSED:
+accuracy: 0.9305816135084428
+fscore: 0.9247480905987047
+OPEN:
+accuracy: 0.7855824446267432
+fscore: 0.6213049390792266
+
+
+criterion='gini', splitter='best', max_depth=5, min_samples_split=0.02, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features='auto', random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, min_impurity_split=None, class_weight=None, presort=False
+#################################################################################################################################
+
+CLOSED:
+accuracy: 0.8840525328330207
+fscore: 0.8683650837419525
+OPEN:
+accuracy: 0.8458777686628384
+fscore: 0.7502183655261762
 
 
 
