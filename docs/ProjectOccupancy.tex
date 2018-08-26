@@ -18,44 +18,51 @@
 
 \begin{document}
 
-\title{Prediction of Accurate Occupancy in an office 
-room using Supervised Machine Learning 
-Techniques}
+\title{Energy-Efficient Smart Buildings by Occupancy
+Prediction}
 
 
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
 \author{\IEEEauthorblockN{Mina Moghaddam}
-\IEEEauthorblockA{Engineering Faculty\\ Department of Computer Engineering\\
-			Middle East Technical University\\
-			Ankara, Turkey\\
-			Email: Mina.moghaddam90@gmail.com\\
-			Student Number: 2343341}
+\IEEEauthorblockA{\textit{Department of Computer}\\
+		    \textit{Engineering Middle East}\\
+			\textit{Technical University, Ankara,}\\
+			\textit{Turkey}\\
+			Mina.moghaddam90@gmail.com}
 \and
 \IEEEauthorblockN{Tahsincan K{\"o}se}
-\IEEEauthorblockA{Engineering Faculty\\ Department of Computer Engineering\\
-			Middle East Technical University\\
-			Ankara, Turkey\\
-			Email: tahsincan.kose@ceng.metu.edu.tr\\
-			Student Number: 2188423}
+\IEEEauthorblockA{\textit{Department of Computer}\\
+		    \textit{Engineering Middle East}\\
+			\textit{Technical University, Ankara,}\\
+			\textit{Turkey}\\
+			tahsincan.kose@ceng.metu.edu.tr}
 \and
-\IEEEauthorblockN{M. Rasit Ozdemir\\  Engineering Faculty}
-\IEEEauthorblockA{Department of Computer Engineering\\
-            Middle East Technical University\\
-            Ankara, Turkey\\
-            Email: e1942606@ceng.metu.edu.tr\\}
+\IEEEauthorblockN{M. Rasit Ozdemir\\}
+\IEEEauthorblockA{\textit{Department of Computer}\\
+		    \textit{Engineering Middle East}\\
+			\textit{Technical University, Ankara,}\\
+			\textit{Turkey}\\
+			e1942606@ceng.metu.edu.tr}
 \and
 \IEEEauthorblockN{\ \ \ \ \ \ \ \ \ }
 \IEEEauthorblockA{\ \ \ \ \ \ \ \ \ }
 \and
-\centering
-\IEEEauthorblockN{Zakiah Utami}
-\IEEEauthorblockA{Engineering Faculty\\ Department of Computer Engineering\\
-			Middle East Technical University\\
-			Ankara, Turkey\\
-			Email: utami.zakiah@metu.edu.tr\\
-			Student Number: 2102663}
+
+\IEEEauthorblockN{\hspace{4cm}Zakiah Utami}
+\IEEEauthorblockA{\hspace{4cm}\textit{Department of Computer}\\
+		    \hspace{4cm}\textit{Engineering Middle East}\\
+			\hspace{4cm}\textit{Technical University, Ankara,}\\
+			\hspace{4cm}\textit{Turkey}\\
+		    \hspace{4cm}utami.zakiah@metu.edu.tr}
+\and
+\IEEEauthorblockN{\hspace{-1.5cm}Seyda Ertekin}
+\IEEEauthorblockA{\hspace{-1.5cm}\textit{Department of Computer}\\
+		    \hspace{-1.5cm}\textit{Engineering Middle East}\\
+			\hspace{-1.5cm}\textit{Technical University, Ankara,}\\
+			\hspace{-1.5cm}\textit{Turkey}\\
+		    \hspace{-1.5cm}seyda@ceng.metu.edu.tr}
 }
 
 
@@ -67,27 +74,57 @@ Techniques}
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
-The abstract goes here.
+Based on the increase in energy
+consumption, energy efficiency has become a
+paramount topic. Through the energy conservation
+studies, it can be achieved by predicting occupant
+presence in buildings. In this study, the accuracy of
+occupancy prediction has been tested on data from
+differences in levels of Light, CO2, and Humidity in
+intervals of 1, 3, and 5 minutes. Artificial Neural
+Networks (ANN), Support Vector Machines (SVM), and
+Decision Trees have been chosen as learning
+algorithms. Various setups and hyper-parameters are
+used and the accuracy is in range of 80 to 90 percent.
+The study shows that using data generated from only
+changes in values of parameters, despite being more
+general than absolute values, have still a high prediction
+accuracy.\\
+
+Index Terms --- Building energy efficiency, machine
+learning, occupancy prediction, office room.
 \end{abstract}
 
 
 
 \section{Introduction}
-In this era, occupation in human spaces impress different aspects of a building like light, temperature, humidity and so on. In order to meet this needs heating, cooling and ventilation are required. These accounts for 35\% energy usage in the United States. Currently, most modern
-buildings still condition rooms assuming maximum occupancy rather than actual usage.It is of little debate in today’s world that modeling occupant behavior and its information is of great importance. It is quite expected to notice significant energy savings that can be achieved by the accurate prediction of occupancy in buildings. In this developed society, commercial office buildings require large amount of area and energy to create comfortable zone for their occupants. In detail lighting, heating, ventilation and
-air-conditioning systems (L-HVAC) consume the most energy,
-together accounting for about 70\% of the overall energy consumed in
-a typical office building\cite{OccMeasure}. With this in mind, the office buildings are useful targets of modeling occupant behavior to manage its potential of energy sources accurately in order to increase energy savings. In a recent study it is illustrated that accurate occupation prediction in buildings has been estimated 15 to 25\% energy savings \cite{ReductoHVAC}. In another simulation-based study\cite{SensorOcc}, the potential energy savings is suggested as approximately 30\%.\\
+In this era, occupation in human spaces impress
+different aspects of a building like light, temperature,
+humidity and so on. It is of little debate in today’s world
+that modeling occupant behavior and its information is of
+great importance. It is quite expected to notice significant
+energy savings that can be achieved by the accurate
+prediction of occupancy in buildings. In this developed
+society, commercial office buildings require a large
+amount of area and energy to create a comfort zone for
+their occupants\cite{OccMeasure}. With this in mind, the office buildings are useful targets for modeling occupant behavior to manage its potential of energy sources accurately in order to increase energy savings. In a recent study, it is illustrated that accurate occupation prediction in buildings has been estimated at 15 to 25 \% energy savings\cite{ReductoHVAC}. In another simulation-based study\cite{SensorOcc}, the potential energy savings is suggested as approximately 30\%.\\
 
-Current status of industrial energy consumption possess an important risk to society and environment in terms of sufficiency of resources. Although various governments around the globe have set quantified targets that anticipate 20\%\cite{TargetCons} energy usage reduction in overall, the total industrial consumption still follows an ascending trend. Also, commercial office buildings comprise the majority of in floor areas in most of the developed countries hence consume remarkable amount of energy in the logistics of building services. Having all these considered, the problem regards to the necessity of effective energy usage. Meanwhile, this implies the minimization of resource dissipation in such enormous in-floor areas. In fact, this is just a single part of the whole problem. Thinking on a global scope brings one to the problem of world's inability to restore its natural resources fully anymore. Failing to capture this problem would result in higher energy wastage which becomes more and more profoundly threatening for the entire world. For that reason, resolving this sub-problem effectively would inspire all other sectors, thus affects the whole problem in long term.
+Current status
+of industrial energy consumption possesses an important
+risk to society and environment in terms of sufficiency of
+resources. Although various governments around the
+globe have set quantified targets that anticipate 20\%\cite{TargetCons} energy usage reduction in overall, the total industrial consumption still follows an ascending trend. Also, commercial office buildings comprise the majority of in-
+floor areas in most of the developed countries hence consume the remarkable amount of energy in the logistics of building services. Having all these considered the problem with regards to the necessity of effective energy usage. Meanwhile, this implies the minimization of resource dissipation in such enormous in-floor areas. In fact, this is just a single part of the whole problem. Thinking on a global scope brings one to the problem of world’s inability to restore its natural resources fully anymore. Failing to capture this problem would result in higher energy wastage which becomes more and more profoundly threatening for the entire world. For that reason, resolving this sub-problem effectively would
+inspire all other sectors, thus affects the whole problem in long-term.
 
 \section{Method}
 The project's aim is to predict occupation in an office room during different hours based on the data from light, temperature, humidity and CO2 by using Machine Learning approach. There were used three datasets for training and testing, that two testing datasets for open and close door in the office \cite{Candanedo}.
 
 
-The original article in which the dataset was gathered and analyzed used a variety of statistical approaches on the data. The authors of the original article have named 4 of the methods in which they have better results: Random Forest (RF), Linear Discriminatory Analysis (LDA), Classification and Regression Trees (CART), and Gradient Boost Machines (GBM), but they have tried other methods such as Artificial Neural Networks (ANN) and Support Vector Machines (SVM) \cite{Erickson}. Our aim is to take ANN, SVM or a combinatory approach of both methods. Additionally, we assume that augmenting the data with expert knowledge extracted from the already existing dataset can have a boosting effect on performance of our method.
+The original article in which the dataset was gathered and analyzed used a variety of statistical approaches on
+the data. Our aim is to take ANN, SVM\cite{Erickson} and Decision Tree methods to increase the accuracy in a generalized version of the problem, which we believe that is a more extensive solution regarding to the overall problem.  Additionally, we assume that augmenting the data with expert knowledge extracted from the already existing dataset can have a boosting effect on performance of our method.
 
-The datasets consist of labeled training and test data (for supervised learning) with 7 attributes such as Time (Date time: year-month-day hour: minute: second), Temperature (Celsius), Relative Humidity (\%), Light (Lux), CO2 (ppm), Humidity Ratio (Derived quantity from temperature and relative humidity, in kg water-vapor/kg-air) and Occupancy (0 or 1, 0 for not occupied, 1 for occupied status). Training data consists of 8143 entities. Test data is divided into two portions, one is data gathered while the door was close, with 2665 rows of data, and the other one is data gathered while the door was open, with 9752 rows of data \cite{Ryu}.
+The datasets consist of labeled training and test data with 7 attributes such as Time, Temperature, Relative Humidity, Light, CO2, Humidity Ratio, and Occupancy. Training data consists of 8143 entities. Test data is divided into two portions, one is data gathered while the door was closed, with 2665 rows of data, and the other one is data gathered while the door was open, with 9752 rows of data \cite{Ryu}.
 
 We have used the already existing information to augment the data with 9 new attributes. These 9 new attributes are: Differences of CO2 level in 1 minute interval, Differences of CO2 level in 3 minutes interval, Differences of CO2 level in 5 minute interval, Differences of Humidity level in 1 minute interval, Differences of Humidity level in 3 minute interval, Differences of Humidity level in 5 minute interval, Differences of Light level in 1 minute interval, Differences of Light level in 3 minute interval, and Differences of Light level in 5 minute interval.
 
@@ -188,7 +225,7 @@ Figure \ref{mix_lr} represents loss,  accuracy, F1 score values with respect to 
 
 Experiments thus far have been done with a simple model. Architecture adjustment is normally required when there are over-fitting or under-fitting issues in the learning process. Nonetheless, this model does not suffer from those two; thus, adjusting the number of layers and their sizes would not make any significant improvements on the estimations. In any case, this assumption should be tested via experimentation on these particular hyper-parameters. Note that learning rate is fixed to 0.009.\\
 
-\begin{table}[H]
+\begin{table}[ht]
 	\centering
 	\caption{Epoch vs. Accuracy of Several Architectures - Closed Door}
 	\label{AllArches}
@@ -263,6 +300,7 @@ Note that, initial architecture which employs different loss criteria and an add
 In this set of experiments, last architecture reaches to the best accuracy of \textbf{0.815 }rate among others as can be seen in Table \ref{AllArches2}. Learning rate $\alpha$ is fixed to 0.009 as in the first set of experiments.\\
  
 Consequently, initial architecture with MSE loss performs slightly better than the current set of architectures which utilizes cross entropy loss, regarding to the closed door test set. Contrarily, latter performs slightly better than the initial architecture in terms of open door test set. 
+
 \subsection{Suport Vector Machines}
 For Support Vector Machine method, we configure the SVM parameters and report their results. We record the results for two performance metrics: accuracy and f-score. F-score is also important for us, because our data set is slightly imbalanced. F-score is a kind of weighted average of precision and recall.
 
@@ -397,7 +435,13 @@ Below are the tables consists of some experimental data in two cases, closed and
 
 As we can see from the table above, we started the experiment by comparing the Criterion function. We got the accuracy better when we use gini function instead of entropy. Focusing on gini function, we iterate to find the best number of the maximum depth of the tree, and find 6 is the best on this case. Then we tune the Min Weight value, and pick 0.0 and 0.1 to be taken for comparison in the continuing experiment. We then try some possible values for Max Features and Random State. As the result, the maximum \textit{accuracy} after training for the case of closed door is \textbf{0.834} with \textit{F1 score} is \textbf{0.803}, when gini criteria was used for the Gini impurity and the maximum depth of the decision tree is 6. \\
 
-For further result to see the tree produced on best accuracy of closed door case, go to this url: \url{https://www.dropbox.com/s/uzmkfe0ugdlzr67/decision_tree_closed_door.png?dl=0}
+
+\begin{figure}[H]
+	\includegraphics[width=1\columnwidth]{tree.png}
+	\caption{Resulting Decision Tree - Closed Door}
+	\label{Tree1}
+\end{figure}
+
 
 
 \begin{table}[H]
@@ -443,42 +487,54 @@ While in experiment of the open door case as shown in table above, by doing simi
 
 More, by comparing the "Max Feature" values, we also see that the best accuracy is always obtained when the number of maximum features to consider when looking for the best split is set to be log2 for this dataset. \\
 
-For further result to see the tree produced on best accuracy of open door case, go to this url: \url{https://www.dropbox.com/s/42ncyrdaorvfsuf/decision_tree_opened_door.png?dl=0}
+\begin{figure}[H]
+	\includegraphics[width=1\columnwidth]{tree2.png}
+	\caption{Resulting Decision Tree - Open Door}
+	\label{Tree2}
+\end{figure}
 
 \vspace{2cm}
 \section{Conclusion}
-The conclusion goes here.
+The main purpose of this research is to test different
+machine learning methods which can successfully predict
+occupancy status of an environment using the generalized
+version of data from \cite{Candanedo}. Some of the crucial factors
+present in the original data which can give a very high
+predictive power, such as time of the day, is completely
+omitted from the data set in favor of generalization. The
+remaining factors have been processed for new attributes.
+Our hypothesis was, given a good model, Artificial
+Neural Networks and Support Vector Machines can reach
+a reliable accuracy. Our research result, which is present
+in the Evaluation section of the article shows that Both
+ANN and SVM have the capability of reaching up to 90
+percent accuracy. We included prediction result using
+Decision Trees to compare with the original article.\\
 
-
-
-
-% conference papers do not normally have an appendix
-
-
-% use section* for acknowledgment
-\section*{Acknowledgment}
-
-
-The authors would like to thank...
-
+Overall, despite that original authors have cast side
+Artificial Neural Networks and Support Vector Machines
+for not being accurate enough, the result of this research confirms that using generalized data to train Artificial
+Neural Networks and Support Vector Machines can reach
+a fair accuracy even without using time or other absolute
+attributes.
 
 
 \begin{thebibliography}{1}
 \bibitem{OccMeasure}
-T. Labeodan, W. Zeiler, G. Boxem, Y. Zhao, \emph{\textbf{Occupancy   measurement   in   commercial   office  
+T. Labeodan, et al, \emph{\textbf{Occupancy   measurement   in   commercial   office  
 buildings   for   demand-driven   control   applications   -   A   survey   and   detection   system   evaluation.}}\\  
-Energy and Buildings. 93(2015), pp. 303-314.
+Journal of Energy and Buildings. 93(2015), pp. 303-314.
 \bibitem{ReductoHVAC}
-V.   L.   Erickson,   M.   a.   Carreira-Perpinan,   A.   E.   Cerpa,    \emph{\textbf{OBSERVE: Occupancy-based system for efficient reduction of HVAC energy.}}\\Proceedings   of   the   10th   ACM/IEEE   International   Conference  
+V. L. Erickson, et al,    \emph{\textbf{OBSERVE: Occupancy-based system for efficient reduction of HVAC energy.}}\\Proceedings   of   the   10th   ACM/IEEE   International   Conference  
 on Information Processing in Sensor Networks, 258-269 (2011).
 \bibitem{SensorOcc}
 B.   Dong,   B.   Andrews, \emph{\textbf{Sensor-based   Occupancy   Behavioral   Pattern   Recognition   For   Energy  
 And   Comfort   Management   In   Intelligent   Buildings}}\\Eleventh   International   IBPSA   Conference,  
 1444-1451 (2009).
 \bibitem{TargetCons}
-E.U., \emph{\textbf{Directive 2010/31/EU of the European Parliament and of the Council of 19
-May 2010 on the Energy Performance of Buildings (Recast)}}, Off. J. Eur. Union
-53 (2010) 13-33.
+E.U, \emph{\textbf{Directive 2010/31/EU of the European Parliament and of the Council of 19
+May 2010 on the Energy Performance of Buildings (Recast)}}, Official Journal of the
+European Union, vol. 18, no. 6, pp.13–33, 2010.
 \bibitem{Candanedo}
 L. M. Candanedo, V. Feldheim, \emph{\textbf{Accurate occupancy detection of an office room from light, temperature, humidity and CO2 measurements using statistical learning models}}, Energy and Buildings. 112, (2016) 28-39.
 \bibitem{Erickson}
