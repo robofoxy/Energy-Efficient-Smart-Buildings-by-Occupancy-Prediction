@@ -1,12 +1,8 @@
 \documentclass[conference]{IEEEtran}
 
-
-
 \ifCLASSINFOpdf
 \else
 \fi
-
-
 
 \usepackage{url}
 \usepackage{graphicx}
@@ -285,7 +281,7 @@ As we can see from the table above, we started the experiment by comparing the C
 
 While in experiment of the open door case as shown in table above, by doing similar approach as done in previous case, the best \textit{accuracy} obtained is \textbf{0.8513} with \textit{F1 score} is \textbf{0.7587} when we use gini criterion with maximum depth is 6 and the number of maximum features is the log2 of the number of the features.\\
 
-More, by comparing the "Max Feature" values, we also see that the best accuracy is always obtained when the number of maximum features to consider when looking for the best split is set to be log2 for this dataset. \\
+More, by comparing the "Max Feature" values, we also see that the best accuracy is always obtained when the number of maximum features to consider when looking for the best split is set to be log2 for this dataset. You can click to see \href{https://github.com/robofoxy/Energy-Efficient-Smart-Buildings-by-Occupancy-Prediction/blob/master/docs/treeOPENMAX85131255125.png}{open} and \href{https://github.com/robofoxy/Energy-Efficient-Smart-Buildings-by-Occupancy-Prediction/blob/master/docs/tree9365853658536586.png}{closed} door versions of most accurate trees.
 
 \section{Conclusion}
 The main purpose of this research is to test different
@@ -305,8 +301,7 @@ Support Vector Machines to compare with the original article.\\
 Overall, despite that original authors have cast side Decision Trees and
 Artificial Neural Networks for not being accurate enough, the result of this research confirms that using generalized data to train Decision Trees and Artificial
 Neural Networks can reach a fair accuracy even without using time or other absolute
-attributes.
-
+attributes. Here is our \href{https://github.com/robofoxy/Energy-Efficient-Smart-Buildings-by-Occupancy-Prediction/tree/master}{github repository} provided.
 
 \begin{thebibliography}{1}
 \bibitem{OccMeasure}
@@ -349,5 +344,4 @@ International Conference on Learning Representations (2015).
 
 % that's all folks
 \end{document}
-
 
